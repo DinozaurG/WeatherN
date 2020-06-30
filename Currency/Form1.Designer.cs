@@ -29,107 +29,140 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.initPrice = new System.Windows.Forms.Label();
-            this.wish = new System.Windows.Forms.Label();
-            this.initialPrice = new System.Windows.Forms.NumericUpDown();
-            this.daysOfWish = new System.Windows.Forms.NumericUpDown();
-            this.days = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelWthrBadIdeal = new System.Windows.Forms.Label();
+            this.labelWthrMediumIdeal = new System.Windows.Forms.Label();
+            this.labelWthrGoodIdeal = new System.Windows.Forms.Label();
+            this.labelWthrBad = new System.Windows.Forms.Label();
+            this.labelWthrMedium = new System.Windows.Forms.Label();
+            this.labelWthrGood = new System.Windows.Forms.Label();
+            this.hourCount = new System.Windows.Forms.Label();
             this.btCalc = new System.Windows.Forms.Button();
+            this.hours = new System.Windows.Forms.Label();
+            this.hoursOfWish = new System.Windows.Forms.NumericUpDown();
+            this.wish = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.buyButton = new System.Windows.Forms.Button();
-            this.sellButton = new System.Windows.Forms.Button();
-            this.cash = new System.Windows.Forms.Label();
-            this.dayCount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hoursOfWish)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.initialPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.daysOfWish)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dayCount);
-            this.panel1.Controls.Add(this.cash);
-            this.panel1.Controls.Add(this.sellButton);
-            this.panel1.Controls.Add(this.buyButton);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.labelWthrBadIdeal);
+            this.panel1.Controls.Add(this.labelWthrMediumIdeal);
+            this.panel1.Controls.Add(this.labelWthrGoodIdeal);
+            this.panel1.Controls.Add(this.labelWthrBad);
+            this.panel1.Controls.Add(this.labelWthrMedium);
+            this.panel1.Controls.Add(this.labelWthrGood);
+            this.panel1.Controls.Add(this.hourCount);
             this.panel1.Controls.Add(this.btCalc);
-            this.panel1.Controls.Add(this.days);
-            this.panel1.Controls.Add(this.daysOfWish);
-            this.panel1.Controls.Add(this.initialPrice);
+            this.panel1.Controls.Add(this.hours);
+            this.panel1.Controls.Add(this.hoursOfWish);
             this.panel1.Controls.Add(this.wish);
-            this.panel1.Controls.Add(this.initPrice);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1175, 100);
             this.panel1.TabIndex = 0;
             // 
-            // chart1
+            // label3
             // 
-            chartArea1.AxisY.IsStartedFromZero = false;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Location = new System.Drawing.Point(13, 120);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.IsValueShownAsLabel = true;
-            series1.LabelFormat = "f4";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1175, 678);
-            this.chart1.TabIndex = 1;
-            this.chart1.Text = "chart1";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1087, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 17);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "3 - Дождь";
             // 
-            // initPrice
+            // label2
             // 
-            this.initPrice.AutoSize = true;
-            this.initPrice.Location = new System.Drawing.Point(13, 15);
-            this.initPrice.Name = "initPrice";
-            this.initPrice.Size = new System.Drawing.Size(121, 17);
-            this.initPrice.TabIndex = 0;
-            this.initPrice.Text = "Начальная цена:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1065, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 17);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "2 - Пасмурно";
             // 
-            // wish
+            // label1
             // 
-            this.wish.AutoSize = true;
-            this.wish.Location = new System.Drawing.Point(13, 50);
-            this.wish.Name = "wish";
-            this.wish.Size = new System.Drawing.Size(82, 17);
-            this.wish.TabIndex = 1;
-            this.wish.Text = "Прогноз на";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1097, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 17);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "1 - Ясно";
             // 
-            // initialPrice
+            // labelWthrBadIdeal
             // 
-            this.initialPrice.DecimalPlaces = 4;
-            this.initialPrice.Location = new System.Drawing.Point(140, 15);
-            this.initialPrice.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.initialPrice.Name = "initialPrice";
-            this.initialPrice.Size = new System.Drawing.Size(120, 22);
-            this.initialPrice.TabIndex = 2;
+            this.labelWthrBadIdeal.AutoSize = true;
+            this.labelWthrBadIdeal.Location = new System.Drawing.Point(736, 55);
+            this.labelWthrBadIdeal.Name = "labelWthrBadIdeal";
+            this.labelWthrBadIdeal.Size = new System.Drawing.Size(46, 17);
+            this.labelWthrBadIdeal.TabIndex = 15;
+            this.labelWthrBadIdeal.Text = "label6";
             // 
-            // daysOfWish
+            // labelWthrMediumIdeal
             // 
-            this.daysOfWish.Location = new System.Drawing.Point(101, 50);
-            this.daysOfWish.Name = "daysOfWish";
-            this.daysOfWish.Size = new System.Drawing.Size(120, 22);
-            this.daysOfWish.TabIndex = 3;
+            this.labelWthrMediumIdeal.AutoSize = true;
+            this.labelWthrMediumIdeal.Location = new System.Drawing.Point(736, 34);
+            this.labelWthrMediumIdeal.Name = "labelWthrMediumIdeal";
+            this.labelWthrMediumIdeal.Size = new System.Drawing.Size(46, 17);
+            this.labelWthrMediumIdeal.TabIndex = 14;
+            this.labelWthrMediumIdeal.Text = "label5";
             // 
-            // days
+            // labelWthrGoodIdeal
             // 
-            this.days.AutoSize = true;
-            this.days.Location = new System.Drawing.Point(227, 50);
-            this.days.Name = "days";
-            this.days.Size = new System.Drawing.Size(40, 17);
-            this.days.TabIndex = 4;
-            this.days.Text = "дней";
+            this.labelWthrGoodIdeal.AutoSize = true;
+            this.labelWthrGoodIdeal.Location = new System.Drawing.Point(736, 13);
+            this.labelWthrGoodIdeal.Name = "labelWthrGoodIdeal";
+            this.labelWthrGoodIdeal.Size = new System.Drawing.Size(46, 17);
+            this.labelWthrGoodIdeal.TabIndex = 13;
+            this.labelWthrGoodIdeal.Text = "label4";
+            // 
+            // labelWthrBad
+            // 
+            this.labelWthrBad.AutoSize = true;
+            this.labelWthrBad.Location = new System.Drawing.Point(469, 55);
+            this.labelWthrBad.Name = "labelWthrBad";
+            this.labelWthrBad.Size = new System.Drawing.Size(46, 17);
+            this.labelWthrBad.TabIndex = 12;
+            this.labelWthrBad.Text = "label3";
+            // 
+            // labelWthrMedium
+            // 
+            this.labelWthrMedium.AutoSize = true;
+            this.labelWthrMedium.Location = new System.Drawing.Point(469, 34);
+            this.labelWthrMedium.Name = "labelWthrMedium";
+            this.labelWthrMedium.Size = new System.Drawing.Size(46, 17);
+            this.labelWthrMedium.TabIndex = 11;
+            this.labelWthrMedium.Text = "label2";
+            // 
+            // labelWthrGood
+            // 
+            this.labelWthrGood.AutoSize = true;
+            this.labelWthrGood.Location = new System.Drawing.Point(469, 15);
+            this.labelWthrGood.Name = "labelWthrGood";
+            this.labelWthrGood.Size = new System.Drawing.Size(46, 17);
+            this.labelWthrGood.TabIndex = 10;
+            this.labelWthrGood.Text = "label1";
+            // 
+            // hourCount
+            // 
+            this.hourCount.AutoSize = true;
+            this.hourCount.Location = new System.Drawing.Point(1097, 15);
+            this.hourCount.Name = "hourCount";
+            this.hourCount.Size = new System.Drawing.Size(55, 17);
+            this.hourCount.TabIndex = 9;
+            this.hourCount.Text = "Hour: 0";
             // 
             // btCalc
             // 
@@ -141,48 +174,56 @@
             this.btCalc.UseVisualStyleBackColor = true;
             this.btCalc.Click += new System.EventHandler(this.btCalc_Click);
             // 
+            // hours
+            // 
+            this.hours.AutoSize = true;
+            this.hours.Location = new System.Drawing.Point(227, 36);
+            this.hours.Name = "hours";
+            this.hours.Size = new System.Drawing.Size(46, 17);
+            this.hours.TabIndex = 4;
+            this.hours.Text = "часов";
+            // 
+            // hoursOfWish
+            // 
+            this.hoursOfWish.Location = new System.Drawing.Point(101, 34);
+            this.hoursOfWish.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.hoursOfWish.Name = "hoursOfWish";
+            this.hoursOfWish.Size = new System.Drawing.Size(120, 22);
+            this.hoursOfWish.TabIndex = 3;
+            // 
+            // wish
+            // 
+            this.wish.AutoSize = true;
+            this.wish.Location = new System.Drawing.Point(13, 36);
+            this.wish.Name = "wish";
+            this.wish.Size = new System.Drawing.Size(82, 17);
+            this.wish.TabIndex = 1;
+            this.wish.Text = "Прогноз на";
+            // 
+            // chart1
+            // 
+            chartArea3.AxisY.IsStartedFromZero = false;
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            this.chart1.Location = new System.Drawing.Point(13, 120);
+            this.chart1.Name = "chart1";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.IsValueShownAsLabel = true;
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
+            this.chart1.Size = new System.Drawing.Size(1175, 678);
+            this.chart1.TabIndex = 1;
+            this.chart1.Text = "chart1";
+            // 
             // timer
             // 
-            this.timer.Interval = 5000;
+            this.timer.Interval = 10;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // buyButton
-            // 
-            this.buyButton.Location = new System.Drawing.Point(516, 15);
-            this.buyButton.Name = "buyButton";
-            this.buyButton.Size = new System.Drawing.Size(100, 33);
-            this.buyButton.TabIndex = 6;
-            this.buyButton.Text = "Купить";
-            this.buyButton.UseVisualStyleBackColor = true;
-            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
-            // 
-            // sellButton
-            // 
-            this.sellButton.Location = new System.Drawing.Point(622, 15);
-            this.sellButton.Name = "sellButton";
-            this.sellButton.Size = new System.Drawing.Size(103, 33);
-            this.sellButton.TabIndex = 7;
-            this.sellButton.Text = "Продать";
-            this.sellButton.UseVisualStyleBackColor = true;
-            this.sellButton.Click += new System.EventHandler(this.sellButton_Click);
-            // 
-            // cash
-            // 
-            this.cash.AutoSize = true;
-            this.cash.Location = new System.Drawing.Point(516, 55);
-            this.cash.Name = "cash";
-            this.cash.Size = new System.Drawing.Size(56, 17);
-            this.cash.TabIndex = 8;
-            this.cash.Text = "Cash: 0";
-            // 
-            // dayCount
-            // 
-            this.dayCount.AutoSize = true;
-            this.dayCount.Location = new System.Drawing.Point(970, 15);
-            this.dayCount.Name = "dayCount";
-            this.dayCount.Size = new System.Drawing.Size(49, 17);
-            this.dayCount.TabIndex = 9;
-            this.dayCount.Text = "Day: 0";
             // 
             // Form1
             // 
@@ -195,9 +236,8 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hoursOfWish)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.initialPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.daysOfWish)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,17 +246,21 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btCalc;
-        private System.Windows.Forms.Label days;
-        private System.Windows.Forms.NumericUpDown daysOfWish;
-        private System.Windows.Forms.NumericUpDown initialPrice;
+        private System.Windows.Forms.Label hours;
+        private System.Windows.Forms.NumericUpDown hoursOfWish;
         private System.Windows.Forms.Label wish;
-        private System.Windows.Forms.Label initPrice;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.Label cash;
-        private System.Windows.Forms.Button sellButton;
-        private System.Windows.Forms.Button buyButton;
-        private System.Windows.Forms.Label dayCount;
+        private System.Windows.Forms.Label hourCount;
+        private System.Windows.Forms.Label labelWthrBadIdeal;
+        private System.Windows.Forms.Label labelWthrMediumIdeal;
+        private System.Windows.Forms.Label labelWthrGoodIdeal;
+        private System.Windows.Forms.Label labelWthrBad;
+        private System.Windows.Forms.Label labelWthrMedium;
+        private System.Windows.Forms.Label labelWthrGood;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
