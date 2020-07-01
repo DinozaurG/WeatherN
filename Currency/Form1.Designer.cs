@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1087, 72);
+            this.label3.Location = new System.Drawing.Point(1100, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 17);
             this.label3.TabIndex = 18;
@@ -86,7 +86,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1065, 55);
+            this.label2.Location = new System.Drawing.Point(1078, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 17);
             this.label2.TabIndex = 17;
@@ -104,7 +104,7 @@
             // labelWthrBadIdeal
             // 
             this.labelWthrBadIdeal.AutoSize = true;
-            this.labelWthrBadIdeal.Location = new System.Drawing.Point(736, 55);
+            this.labelWthrBadIdeal.Location = new System.Drawing.Point(692, 55);
             this.labelWthrBadIdeal.Name = "labelWthrBadIdeal";
             this.labelWthrBadIdeal.Size = new System.Drawing.Size(46, 17);
             this.labelWthrBadIdeal.TabIndex = 15;
@@ -113,7 +113,7 @@
             // labelWthrMediumIdeal
             // 
             this.labelWthrMediumIdeal.AutoSize = true;
-            this.labelWthrMediumIdeal.Location = new System.Drawing.Point(736, 34);
+            this.labelWthrMediumIdeal.Location = new System.Drawing.Point(692, 34);
             this.labelWthrMediumIdeal.Name = "labelWthrMediumIdeal";
             this.labelWthrMediumIdeal.Size = new System.Drawing.Size(46, 17);
             this.labelWthrMediumIdeal.TabIndex = 14;
@@ -122,7 +122,7 @@
             // labelWthrGoodIdeal
             // 
             this.labelWthrGoodIdeal.AutoSize = true;
-            this.labelWthrGoodIdeal.Location = new System.Drawing.Point(736, 13);
+            this.labelWthrGoodIdeal.Location = new System.Drawing.Point(692, 13);
             this.labelWthrGoodIdeal.Name = "labelWthrGoodIdeal";
             this.labelWthrGoodIdeal.Size = new System.Drawing.Size(46, 17);
             this.labelWthrGoodIdeal.TabIndex = 13;
@@ -131,7 +131,7 @@
             // labelWthrBad
             // 
             this.labelWthrBad.AutoSize = true;
-            this.labelWthrBad.Location = new System.Drawing.Point(469, 55);
+            this.labelWthrBad.Location = new System.Drawing.Point(419, 55);
             this.labelWthrBad.Name = "labelWthrBad";
             this.labelWthrBad.Size = new System.Drawing.Size(46, 17);
             this.labelWthrBad.TabIndex = 12;
@@ -140,7 +140,7 @@
             // labelWthrMedium
             // 
             this.labelWthrMedium.AutoSize = true;
-            this.labelWthrMedium.Location = new System.Drawing.Point(469, 34);
+            this.labelWthrMedium.Location = new System.Drawing.Point(419, 34);
             this.labelWthrMedium.Name = "labelWthrMedium";
             this.labelWthrMedium.Size = new System.Drawing.Size(46, 17);
             this.labelWthrMedium.TabIndex = 11;
@@ -149,7 +149,7 @@
             // labelWthrGood
             // 
             this.labelWthrGood.AutoSize = true;
-            this.labelWthrGood.Location = new System.Drawing.Point(469, 15);
+            this.labelWthrGood.Location = new System.Drawing.Point(419, 13);
             this.labelWthrGood.Name = "labelWthrGood";
             this.labelWthrGood.Size = new System.Drawing.Size(46, 17);
             this.labelWthrGood.TabIndex = 10;
@@ -206,16 +206,16 @@
             // 
             // chart1
             // 
-            chartArea3.AxisY.IsStartedFromZero = false;
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
+            chartArea1.AxisY.IsStartedFromZero = false;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Location = new System.Drawing.Point(13, 120);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.IsValueShownAsLabel = true;
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.IsValueShownAsLabel = true;
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(1175, 678);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";

@@ -17,7 +17,9 @@ namespace Currency
         Random rnd = new Random();
         int i, totalHour, state = 0;
         double hour = 1, goodStates = 1, medStates = 0, badStates = 0;
-        double p1, p2, p3;
+        double[] p = { 0.38095, 0.30158, 0.31746 } ;
+        double Average, AverageT, Variance, VarianceT, Chi;
+        bool ChiTest;
         List<double> pointsY = new List<double>();
         public Form1()
         {
@@ -59,17 +61,11 @@ namespace Currency
                     break;
                 }
             }*/
-            p1 = 1 / (((1 - matrix[2, 2]) * matrix[0, 1] + matrix[2,1] * matrix[0,2] + (1 - matrix[1,1]) * matrix[0,2] + matrix[1,2] * matrix[0,1]) / ((1 - matrix[2,2]) * (1 - matrix[1,1]) - matrix[1,2] * matrix[2,1]) + 1);
-            p2 = ((1 - matrix[2,2]) * matrix[0,1] * p1 + matrix[2,1] * matrix[0,2] * p1) / ((1 - matrix[2,2]) * (1 - matrix[1,1]) - matrix[1,2] * matrix[2,1]);
-            p3 = ((1 - matrix[1,1]) * matrix[0,2] * p1 + matrix[1,2] * matrix[0,1] * p1) / ((1 - matrix[2,2]) * (1 - matrix[1,1]) - matrix[1,2] * matrix[2,1]);
             chart1.Series[0].Points.Clear();
             chart1.Series[0].Points.AddXY(0, state + 1);
             labelWthrGood.Text = "Распред. = " + (goodStates / hour);
             labelWthrMedium.Text = "Распред. = " + (medStates / hour);
             labelWthrBad.Text = "Распред. = " + (badStates / hour);
-            labelWthrGoodIdeal.Text = "Теор. идеал. = " + p1;
-            labelWthrMediumIdeal.Text = "Теор. идеал. = " + p2;
-            labelWthrBadIdeal.Text = "Теор. идеал. = " + p3;
             timer.Start();
         }
         private void timer_Tick(object sender, EventArgs e)
@@ -105,12 +101,43 @@ namespace Currency
             }
             hour++;
             hourCount.Text = "Hour: " + hour;
+            Average = 0;
+            double E = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                Average += matrix[i, state] * i;
+                E += p[i] * i;
+            }
+            double AverageError = Math.Abs((Average - E) / E);
+            Variance = 0;
+            double D = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                Variance += matrix[i, state] * i * i;
+                D += p[i] * i * i;
+            }
+            Variance -= Average * Average;
+            D -= E * E;
+            double VarianceError = Math.Abs((Variance - D) / D);
+
+            Chi = 0;
+            Chi += (goodStates - hour * p[0]) * (goodStates - hour * p[0]) / (hour * p[0]);
+            Chi += (medStates - hour * p[1]) * (medStates - hour * p[1]) / (hour * p[1]);
+            Chi += (badStates - hour * p[2]) * (badStates - hour * p[2]) / (hour * p[2]);
+            if (Chi <= 6)
+            {
+                ChiTest = true;
+            }
+            else
+            {
+                ChiTest = false;
+            }
             labelWthrGood.Text = "Распред. = " + (goodStates / hour);
             labelWthrMedium.Text = "Распред. = " + (medStates / hour);
             labelWthrBad.Text = "Распред. = " + (badStates / hour);
-            labelWthrGoodIdeal.Text = "Соотн. с теор. идеал. = " + p1;
-            labelWthrMediumIdeal.Text = "Соотн. с теор. идеал. = " + p2;
-            labelWthrBadIdeal.Text = "Соотн. с теор. идеал. = " + p3;
+            labelWthrGoodIdeal.Text = "Соотн. с теор. идеал. Average = " + AverageError;
+            labelWthrMediumIdeal.Text = "Соотн. с теор. идеал. Variable = " + VarianceError;
+            labelWthrBadIdeal.Text = "Соотн. с теор. идеал. ChiSquare = " + Chi + ChiTest;
             if (hour == totalHour)
             {
                 timer.Stop();
